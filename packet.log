@@ -1,0 +1,745 @@
+
+421_1
+421_1.pro
+.421_1.pro.swp
+421_1.pro.user
+arpdialog.cpp
+arpdialog.h
+arpdialog.o
+arpdialog.ui
+etherdialog.cpp
+etherdialog.h
+etherdialog.o
+etherdialog.ui
+icmpdialog.cpp
+icmpdialog.h
+icmpdialog.o
+icmpdialog.ui
+ipdialog.cpp
+ipdialog.h
+ipdialog.o
+ipdialog.ui
+main.cpp
+main.o
+mainwindow.cpp
+mainwindow.h
+mainwindow.o
+mainwindow.ui
+Makefile
+moc_arpdialog.cpp
+moc_arpdialog.o
+moc_etherdialog.cpp
+moc_etherdialog.o
+moc_icmpdialog.cpp
+moc_icmpdialog.o
+moc_ipdialog.cpp
+moc_ipdialog.o
+moc_mainwindow.cpp
+moc_mainwindow.o
+moc_tcpdialog.cpp
+moc_tcpdialog.o
+moc_udpdialog.cpp
+moc_udpdialog.o
+packet.log
+tcpdialog.cpp
+tcpdialog.h
+tcpdialog.o
+tcpdialog.ui
+udpdialog.cpp
+udpdialog.h
+udpdialog.o
+udpdialog.ui
+ui_arpdialog.h
+ui_etherdialog.h
+ui_icmpdialog.h
+ui_ipdialog.h
+ui_mainwindow.h
+ui_tcpdialog.h
+ui_udpdialog.h
+g++ -c -m32 -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I. -I../../Qt5.5.1/5.5/gcc/include -I../../Qt5.5.1/5.5/gcc/include/QtWidgets -I../../Qt5.5.1/5.5/gcc/include/QtGui -I../../Qt5.5.1/5.5/gcc/include/QtNetwork -I../../Qt5.5.1/5.5/gcc/include/QtCore -I. -I. -I../../Qt5.5.1/5.5/gcc/mkspecs/linux-g++-32 -o udpdialog.o udpdialog.cpp
+udpdialog.cpp: In constructor ‘UDPDialog::UDPDialog(QWidget*)’:
+udpdialog.cpp:45:11: warning: variable ‘net_ip_string’ set but not used [-Wunused-but-set-variable]
+     char *net_ip_string;//网络地址字符串形式
+           ^
+udpdialog.cpp:46:11: warning: variable ‘net_mask_string’ set but not used [-Wunused-but-set-variable]
+     char *net_mask_string;
+           ^
+udpdialog.cpp: In static member function ‘static void UDPDialog::ethernet_protocol_packet_callback(u_char*, const pcap_pkthdr*, const u_char*)’:
+udpdialog.cpp:136:18: warning: unused variable ‘mac_string’ [-Wunused-variable]
+          u_char *mac_string;
+                  ^
+udpdialog.cpp:137:30: warning: unused variable ‘protocol_header’ [-Wunused-variable]
+          struct pcap_pkthdr *protocol_header;
+                              ^
+udpdialog.cpp: At global scope:
+udpdialog.cpp:131:59: warning: unused parameter ‘argument’ [-Wunused-parameter]
+ void UDPDialog::ethernet_protocol_packet_callback(u_char *argument,const struct pcap_pkthdr* packet_header,const u_char* packet_content)
+                                                           ^
+udpdialog.cpp:131:94: warning: unused parameter ‘packet_header’ [-Wunused-parameter]
+ void UDPDialog::ethernet_protocol_packet_callback(u_char *argument,const struct pcap_pkthdr* packet_header,const u_char* packet_content)
+                                                                                              ^
+udpdialog.cpp:201:54: warning: unused parameter ‘argument’ [-Wunused-parameter]
+ void UDPDialog::udp_protocol_packet_callback(u_char *argument,const struct pcap_pkthdr* packet_header,const u_char* packet_content)
+                                                      ^
+udpdialog.cpp:201:89: warning: unused parameter ‘packet_header’ [-Wunused-parameter]
+ void UDPDialog::udp_protocol_packet_callback(u_char *argument,const struct pcap_pkthdr* packet_header,const u_char* packet_content)
+                                                                                         ^
+g++ -m32 -Wl,-O1 -Wl,-rpath,/home/zhaoli/Qt5.5.1/5.5/gcc -Wl,-rpath,/home/zhaoli/Qt5.5.1/5.5/gcc/lib -o 421_1 arpdialog.o etherdialog.o icmpdialog.o ipdialog.o main.o mainwindow.o tcpdialog.o udpdialog.o moc_arpdialog.o moc_etherdialog.o moc_icmpdialog.o moc_ipdialog.o moc_mainwindow.o moc_tcpdialog.o moc_udpdialog.o   -L/usr/local/lib -lpcap -L/home/zhaoli/Qt5.5.1/5.5/gcc/lib -lQt5Widgets -lQt5Gui -lQt5Network -lQt5Core -lGL -lpthread 
+Network interface is:wlan0
+Network IP Address is:192.168.1.0
+Network Mask Address is:255.255.255.0
+****************************************************************************
+The 1th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:9c:2a:70:1f:13:42
+Mac Destination Address is:40:16:9f:13:02:01
+****************************************************************************
+The 2th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:40:16:9f:13:02:01
+Mac Destination Address is:9c:2a:70:1f:13:42
+****************************************************************************
+The 3th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:9c:2a:70:1f:13:42
+Mac Destination Address is:40:16:9f:13:02:01
+****************************************************************************
+The 4th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:40:16:9f:13:02:01
+Mac Destination Address is:9c:2a:70:1f:13:42
+****************************************************************************
+The 5th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:9c:2a:70:1f:13:42
+Mac Destination Address is:40:16:9f:13:02:01
+****************************************************************************
+The 6th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:40:16:9f:13:02:01
+Mac Destination Address is:9c:2a:70:1f:13:42
+****************************************************************************
+The 7th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:9c:2a:70:1f:13:42
+Mac Destination Address is:40:16:9f:13:02:01
+****************************************************************************
+The 8th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:40:16:9f:13:02:01
+Mac Destination Address is:9c:2a:70:1f:13:42
+****************************************************************************
+The 9th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:9c:2a:70:1f:13:42
+Mac Destination Address is:40:16:9f:13:02:01
+****************************************************************************
+The 10th packet is captured.
+--------------------   Ethernet Protocol (Link Layer)   --------------------
+Ethernet type is:0800
+The network layer is IP protocol
+Mac Source Address is:40:16:9f:13:02:01
+Mac Destination Address is:9c:2a:70:1f:13:42
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:25320
+Offset:131072
+TTL:51
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:54448
+Source address:220.181.112.244
+Destination address:192.168.1.190
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:44036
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:20915
+Source address:192.168.1.190
+Destination address:202.118.176.20
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:39357
+Offset:0
+TTL:60
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:43002
+Source address:202.118.176.20
+Destination address:192.168.1.190
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:31156
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:14256
+Source address:192.168.1.190
+Destination address:183.60.15.162
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:900
+Offset:0
+TTL:51
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:64224
+Source address:183.60.15.162
+Destination address:192.168.1.190
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:25558
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:50882
+Source address:192.168.1.190
+Destination address:220.181.112.244
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:25558
+Offset:131072
+TTL:51
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:54210
+Source address:220.181.112.244
+Destination address:192.168.1.190
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:44037
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:20914
+Source address:192.168.1.190
+Destination address:202.118.176.20
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:39358
+Offset:0
+TTL:60
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:43001
+Source address:202.118.176.20
+Destination address:192.168.1.190
+--------------------   IP protocol (Transport Layer)   ---------------------
+
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:31170
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:14242
+Source address:192.168.1.190
+Destination address:183.60.15.162
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:45322
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:19629
+Source address:192.168.1.190
+Destination address:202.118.176.20
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:8
+ICMP Echo Resquest Protocol
+ICMP Code:0
+Identifier:22795
+Sequence Number:47370
+ICMP Checksum:49284
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:39369
+Offset:0
+TTL:60
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:42990
+Source address:202.118.176.20
+Destination address:192.168.1.190
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:0
+ICMP Echo Reply Protocol
+ICMP Code:0
+Identifier:22795
+Sequence Number:47370
+ICMP Checksum:51332
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:32325
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:13087
+Source address:192.168.1.190
+Destination address:183.60.15.162
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:8
+ICMP Echo Resquest Protocol
+ICMP Code:0
+Identifier:32778
+Sequence Number:56843
+ICMP Checksum:47730
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:912
+Offset:0
+TTL:51
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:64212
+Source address:183.60.15.162
+Destination address:192.168.1.190
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:0
+ICMP Echo Reply Protocol
+ICMP Code:0
+Identifier:32778
+Sequence Number:56843
+ICMP Checksum:49778
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:26964
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:49476
+Source address:192.168.1.190
+Destination address:220.181.112.244
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:8
+ICMP Echo Resquest Protocol
+ICMP Code:0
+Identifier:34059
+Sequence Number:42250
+ICMP Checksum:24397
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:26964
+Offset:131072
+TTL:51
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:52804
+Source address:220.181.112.244
+Destination address:192.168.1.190
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:0
+ICMP Echo Reply Protocol
+ICMP Code:0
+Identifier:34059
+Sequence Number:42250
+ICMP Checksum:26445
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:45496
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:19455
+Source address:192.168.1.190
+Destination address:202.118.176.20
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:8
+ICMP Echo Resquest Protocol
+ICMP Code:0
+Identifier:22795
+Sequence Number:47626
+ICMP Checksum:57979
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:39370
+Offset:0
+TTL:60
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:42989
+Source address:202.118.176.20
+Destination address:192.168.1.190
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:0
+ICMP Echo Reply Protocol
+ICMP Code:0
+Identifier:22795
+Sequence Number:47626
+ICMP Checksum:60027
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:32360
+Offset:131072
+TTL:64
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:13052
+Source address:192.168.1.190
+Destination address:183.60.15.162
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:8
+ICMP Echo Resquest Protocol
+ICMP Code:0
+Identifier:32778
+Sequence Number:57099
+ICMP Checksum:27242
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:84
+Identification:913
+Offset:0
+TTL:51
+Protocol:1
+The Transport Layer Protocol is ICMP
+Header checksum:64211
+Source address:183.60.15.162
+Destination address:192.168.1.190
+--------------------   ICMP protocol (Transport Layer)   --------------------
+ICMP Type:0
+ICMP Echo Reply Protocol
+ICMP Code:0
+Identifier:32778
+Sequence Number:57099
+ICMP Checksum:29290
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:60
+Identification:34974
+Offset:131072
+TTL:64
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:47823
+Source address:192.168.1.190
+Destination address:121.195.187.36
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:33186
+Destination Port:80
+HTTP protocol
+Sequence Number:3345335
+Acknowledgement Number:0
+Header Length:40
+Reserved:0
+Flags:SYNFINRST
+Window Size:29200
+checksum:52623
+Urgent pointer:0
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:48
+Identification:0
+Offset:131072
+TTL:53
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:20090
+Source address:121.195.187.36
+Destination address:192.168.1.190
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:80
+Destination Port:33186
+Sequence Number:3370674202
+Acknowledgement Number:3345336
+Header Length:28
+Reserved:0
+Flags:ACKSYNFINRST
+Window Size:14600
+checksum:37848
+Urgent pointer:0
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:40
+Identification:34975
+Offset:131072
+TTL:64
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:47842
+Source address:192.168.1.190
+Destination address:121.195.187.36
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:33186
+Destination Port:80
+HTTP protocol
+Sequence Number:3345336
+Acknowledgement Number:3370674203
+Header Length:20
+Reserved:0
+Flags:ACKSYNFINRST
+Window Size:29200
+checksum:34708
+Urgent pointer:0
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:1163
+Identification:34976
+Offset:131072
+TTL:64
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:46718
+Source address:192.168.1.190
+Destination address:121.195.187.36
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:33186
+Destination Port:80
+HTTP protocol
+Sequence Number:3345336
+Acknowledgement Number:3370674203
+Header Length:20
+Reserved:0
+Flags:PSHFINRST
+Window Size:29200
+checksum:45618
+Urgent pointer:0
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:40
+Identification:40902
+Offset:131072
+TTL:53
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:44731
+Source address:121.195.187.36
+Destination address:192.168.1.190
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:80
+Destination Port:33186
+Sequence Number:3370674203
+Acknowledgement Number:3346459
+Header Length:20
+Reserved:0
+Flags:ACKSYNFINRST
+Window Size:16845
+checksum:45940
+Urgent pointer:0
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:488
+Identification:40903
+Offset:131072
+TTL:53
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:44282
+Source address:121.195.187.36
+Destination address:192.168.1.190
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:80
+Destination Port:33186
+Sequence Number:3370674203
+Acknowledgement Number:3346459
+Header Length:20
+Reserved:0
+Flags:PSHFINRST
+Window Size:16845
+checksum:36763
+Urgent pointer:0
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:40
+Identification:34977
+Offset:131072
+TTL:64
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:47840
+Source address:192.168.1.190
+Destination address:121.195.187.36
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:33186
+Destination Port:80
+HTTP protocol
+Sequence Number:3346459
+Acknowledgement Number:3370674651
+Header Length:20
+Reserved:0
+Flags:ACKSYNFINRST
+Window Size:30016
+checksum:32321
+Urgent pointer:0
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:60
+Identification:6635
+Offset:131072
+TTL:64
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:10627
+Source address:192.168.1.190
+Destination address:121.195.187.36
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:41994
+Destination Port:443
+Sequence Number:2514721489
+Acknowledgement Number:0
+Header Length:40
+Reserved:0
+Flags:SYNFINRST
+Window Size:29200
+checksum:34016
+Urgent pointer:0
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:48
+Identification:0
+Offset:131072
+TTL:53
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:20090
+Source address:121.195.187.36
+Destination address:192.168.1.190
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:443
+Destination Port:41994
+Sequence Number:3237095959
+Acknowledgement Number:2514721490
+Header Length:28
+Reserved:0
+Flags:ACKSYNFINRST
+Window Size:14600
+checksum:37171
+Urgent pointer:0
+--------------------   IP protocol (Transport Layer)   ---------------------
+IP Version:4
+Header length:20
+TOS:0
+Total length:40
+Identification:6636
+Offset:131072
+TTL:64
+Protocol:6
+The Transport Layer Protocol is TCP
+Header checksum:10646
+Source address:192.168.1.190
+Destination address:121.195.187.36
+--------------------   TCP protocol (Transport Layer)   -------------------- 
+Source Port:41994
+Destination Port:443
+Sequence Number:2514721490
+Acknowledgement Number:3237095960
+Header Length:20
+Reserved:0
+Flags:ACKSYNFINRST
+Window Size:29200
+checksum:34031
+Urgent pointer:0
+
